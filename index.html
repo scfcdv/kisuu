@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>奇数ジェネレーター</title>
+</head>
+<body>
+<input type="number" id="num">
+<input type="button" value="送信" onclick="showOdd()">
+<div id="odd"></div>
+<script>
+function showOdd() {
+  var num = document.getElementById("num").value;
+  var odds = [];
+  for (var i = 0; i < num; i++) {
+    if (i % 2 == 1) {
+      odds.push(i);
+    }
+  }
+  document.getElementById("odd").innerHTML = odds.join(" ");
+}
+</script>
+</body>
+</html>
